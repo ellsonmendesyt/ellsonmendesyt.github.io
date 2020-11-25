@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZOOM e PAN </title>
+<style>
+    body{
+    background: skyblue;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid rgba(200,200,200,0.1);
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(50,60,100,0.6);
+    background-color: slategray;
+    margin-bottom: 50px;
+}
+
+header h3{
+    color:red;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+header h4{
+    color:coral;
+    text-transform: uppercase;
+    font-size: 10px;
+    word-spacing: 10px;
+}
+
+span{
+    color: yellow;
+}
+/* =============================
+          EFEITO PAN E ZOOM
+=================================*/
+
+.janela{
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    border: 1px solid blue;
+    overflow: hidden;
+}
+
+.porta-imagem{
+    width: 400px;
+    height: 400px;
+    border: 1px solid orange;
+}
+
+.porta-imagem img{
+    width: 100%;
+   transition: .2s ease transform;
+}
+
+.janela:hover img{
+    transform: scale(2);
+    cursor: zoom-in;
+}
+
+
+</style>
+</head>
+<body>
+
+<header>
+    <h3>CURSO DE HTML |&nbsp;<span>aula &nbsp;#13</span> </h3>
+    <h4>EFEITO PAN E ZOOM</h4>
+</header>
+    
+
+<div class="janela">
+   <div class="porta-imagem">
+      <img src="./sapatos/sapato1.png" alt="">
+   </div>
+</div>
+
+<script>
+
+ const log= console.log;
+
+const janela = document.querySelector('.janela');
+const portaImagem = document.querySelector('.porta-imagem');
+
+
+janela.addEventListener('mousemove',(e)=>{
+    const x = window.innerWidth * 0.5 - e.pageX;
+    const y = window.innerHeight * 0.5 - e.pageY;
+
+    portaImagem.style.transform = `translate(${x}px, ${y}px)`;
+    
+})
+
+janela.addEventListener('mouseout',(e)=>{
+portaImagem.style.transform=`translate(0px,0px)`;
+})
+
+
+
+</script>
+</body>
+</html>
