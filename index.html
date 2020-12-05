@@ -3,106 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZOOM e PAN </title>
+    <title>AULA  # 15| Background | Imagens </title>
+<link rel="stylesheet" href="titulo.css">
 <style>
-    body{
-    background: skyblue;
+
+ 
+
+ /*-----------------------------------
+ BACKGROUNDS  CORES E IMAGENS 
+
+
+background-color        cor
+background-image        imagem
+background-position     posição
+background-size         tamanho
+background-repeat       repetição
+background-origin       origem - extender
+background-clip         clipar - recortar
+background-attachment   fixação - rolagem
+
+background: color image position/size repeat origin clip attachment
+ ------------------------------------*/
+ .tres{
+    padding: 20px;
+    /* background-image: url('./robo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+   background-origin: border-box;
+   background-clip: border-box;
+   background-attachment:fixed; */
+
+ background: url('./robo.png') 0 0 / cover no-repeat fixed;
+     
+
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    outline: 1px solid rgba(200,200,200,0.1);
-    text-align: center;
-    box-shadow: 5px 5px 10px rgba(50,60,100,0.6);
-    background-color: slategray;
-    margin-bottom: 50px;
-}
 
-header h3{
+
+
+.tres p{
     color:red;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
 }
 
-header h4{
-    color:coral;
-    text-transform: uppercase;
-    font-size: 10px;
-    word-spacing: 10px;
+.um p{
+    color:aliceblue;
 }
-
-span{
+.dois p{
+    /* padding-top: 60px; */
     color: yellow;
-}
-/* =============================
-          EFEITO PAN E ZOOM
-=================================*/
-
-.janela{
-    width: 400px;
-    height: 400px;
-    margin: 20px auto;
-    border: 1px solid blue;
-    overflow: hidden;
+    background: rgba(0,0,0,0.3);
 }
 
-.porta-imagem{
-    width: 400px;
-    height: 400px;
-    border: 1px solid orange;
-}
 
-.porta-imagem img{
-    width: 100%;
-   transition: .2s ease transform;
-}
+ .um{
+     border: 7px dotted darkorange;
+    background-color:blueviolet;
+ }
 
-.janela:hover img{
-    transform: scale(2);
-    cursor: zoom-in;
-}
+ .dois{
+    background-image: url('./robo.png');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position:center ;
+     background-clip:border-box;
+     background-origin: border-box;
+     background-attachment: scroll;   
+ }
 
+ 
 
 </style>
 </head>
 <body>
 
 <header>
-    <h3>CURSO DE HTML |&nbsp;<span>aula &nbsp;#13</span> </h3>
-    <h4>EFEITO PAN E ZOOM</h4>
-</header>
-    
+    <h3>CURSO DE HTML |&nbsp;<span>aula &nbsp;#15</span> </h3>
+    <h4>COMO INSERIR BACKGROUNDS / COR - IMAGEM</h4>
+    <div class="contatos">
+        
+        <a href="http://www.facebook.com/groups/3816296831753843" target="_blank" id="fb" title="Grupo Top das Galáxias">Facebook</a>
 
-<div class="janela">
-   <div class="porta-imagem">
-      <img src="./sapato1.png" alt="">
+        <a href="https://www.youtube.com/channel/UCl5-W0A8tE3EucM7E_yS62A?sub_confirmation=1" target="_blank" id="yt" title="Inscrever-se ellsonmendesYT">Youtube</a>
+        
+    </div>
+</header>
+<hr>
+
+<!-- PRATICAR -->
+
+<section class="praticar">
+    <div class="tres">
+    <p>Vamos praticar  Vamos praticar  Vamos praticar  Vamos praticar Vamos praticar  Vamos praticar  Vamos praticar  Vamos praticar Vamos praticar  Vamos praticar  Vamos praticar  Vamos praticar Vamos praticar  Vamos praticar  Vamos praticar  Vamos praticar Vamos praticar  Vamos praticar  Vamos praticar  Vamos praticar Vamos praticar  Vamos praticar  </p>
+</div>
+</section>
+
+<section id="container">
+ <div class="border-box" title="border-box">
+   <div class="padding-box" title="padding-box">
+       <div class="content-box" title="content-box">
+           <p title="parágrafo">Grupo para discutir, tirar dúvidas e solucionar problemas</p>
+       </div>
    </div>
+ </div>
+</section>
+
+
+<!-- EXEMPLOS -->
+
+<main>
+ <div class="um">
+   <p>PodemoS dar um cor de fundo</p>
+ </div>
+<!--  -->
+<div class="dois">
+    <p>Podemos inserir um imagem de fundo</p>
 </div>
 
-<script>
+</div>
+</main>
 
- const log= console.log;
-
-const janela = document.querySelector('.janela');
-const portaImagem = document.querySelector('.porta-imagem');
+<!-- botao teste -->
 
 
-janela.addEventListener('mousemove',(e)=>{
-    const x = window.innerWidth * 0.5 - e.pageX;
-    const y = window.innerHeight * 0.5 - e.pageY;
+<section class="exemplo">
+    <div class="grupo"></div>
+</section>
 
-    portaImagem.style.transform = `translate(${x}px, ${y}px)`;
-    
-})
+<section class="videos">
+    <img src="./vids.png" alt="videos">
+</section>
 
-janela.addEventListener('mouseout',(e)=>{
-portaImagem.style.transform=`translate(0px,0px)`;
-})
-
-
-
-</script>
 </body>
 </html>
+
+<!-- onclick="location.href='http://www.facebook.com/groups/3816296831753843'"  -->
