@@ -8,19 +8,85 @@ body{
     min-height: 300px;
     /* border:1px solid blue; */
     background-color: #fff;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 }
 
-.outline{
+
+.editor-capa{
+    position: absolute;
+    bottom: 5%;
+    right: 10px;
+    /* transform: translateX(-80%); */
+   
+}
+
+#arquivo{
+    display: none !important;
+}
+
+.editor-capa button{
+    background-color:#F0F2F5;
+    color: black;
+}
+.editor-capa button:active{
+    box-shadow: none !important;
+}
+
+.editor-capa button:hover{
+    background-color:#c5c8ce;
+    color: black;
+}
+
+/* #btn-file{
+appearance: button;
+} */
+
+.out{
     outline: 1px solid orange;
+}
+
+#main-banner{
+    max-width: 940px;
+    max-height: 528.75px;
 }
 
 .bg-dark-100{
     background-color:#292927;;
 }
+/* ICONES */
+.icon-fb:hover{
+    background-color: lightgray;
+}
+
+.btn-fundo{
+    padding: 0px 15px !important;
+    /* outline: 1px solid red; */
+}
+
+.btn-fundo:hover{
+    background:lightgray;
+}
+
+
+
+.btn-back{
+    border-radius: 50%;
+    background-color: #e4e6eb;
+    width: 40px;
+    height: 43px;
+    text-align: center;
+    transition: all .3s;
+}
+
+
+
+.btn-back:hover{
+    background-color:lightgray;
+}
 
 .stripe{
     padding: 15px 0px;
-    border-top: 2px solid lightgray;
+    border-top: 1px solid #999;
    
 }
 
@@ -52,12 +118,16 @@ body{
 }
 .subir{
     position: absolute;
-    top: -140px;
-    left: 43%;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-90%) !important;
+    transform: translateX(-50%);
+    /* top: -140px; */
+    
 }
 
 .gray{
-    background-color: lightgray;
+    background-color: #f0f2f5;
 }
 
 .principal{
@@ -237,17 +307,109 @@ position: relative;
     top: 50px;
 }
 
+
+
 .fa-facebook-official{
  font-size: 50px;
  color: #1771E6;
 }
 
 .pesquisa-topo{
-    border-radius: 50%;
+    border-radius: 40px;
+    background-color: #f0f2f5;
     border: none;
-    width: 45px !important;
-    height: 45px !important;
+    width: 300px !important;
+    height: 40px !important;
 }
+
+
+/* FONTAWESOME NO PLACHOLDER */
+input.pesquisa-topo {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.pesquisa-topo:active{
+    box-shadow: 0px 0px 0px 0px transparent !important;
+}
+
+nav .form-control{
+    background-color: #f0f2f5 !important;
+    box-shadow: none;
+
+}
+
+@media (max-width:900px){
+    .pesquisa-topo{
+        width: 40px !important;
+    }
+    .nav-link{
+        margin-right: 0px !important;
+    }
+
+    .navbar-brand{
+        /* outline: 1px solid green; */
+        padding-left: 0px  !important;
+    }
+
+}
+
+
+/* CARTAO DO AMIGO */
+
+.card-grid-amigos > .card-header{
+    border:none;
+    padding-bottom: 0;
+}
+
+.card-grid-amigos > .card-header a{
+    padding: 4px;
+}
+.card-grid-amigos > .card-header a:hover{
+    text-decoration: none;
+    background-color: #F0F2F5;
+   
+}
+
+
+
+.card-amigo{
+    height: 150px !important;
+    width: 150px !important;
+    margin-bottom: 10px;
+}
+
+.card-amigo .amigo-img-holder{
+    width: 100%;
+    padding: 0px !important;
+    height: 110px !important;
+    overflow: hidden;
+}
+
+.card-amigo .amigo-img-holder img{
+    width: 150px; 
+    /* transform: ; */
+     /* transform: translateX(5px); */
+    /* transform: translateY(-10px); */
+}
+
+.card-amigo{
+    width: 100px;
+    height: 100px;
+    border: 1px solid transparent;
+}
+
+
+.card-amigo .card-footer{
+    max-height: 10px;
+    text-align: center;
+    padding: 3px !important;
+    background-color: #fff;
+    border: none !important;
+}
+
 
 .f-50{
     font-size: 30px !important;
@@ -256,8 +418,54 @@ position: relative;
 }
 
 .f-40{
-    font-size: 30px !important;
-    color: gray;
+    font-size: 28px !important;
+    color:  gray;
     line-height: 30px;
     font-weight: normal !important;
 }
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5px 0px;
+    padding: 1px 20px;
+    border-radius: 7px;
+    padding:5px !important;
+}
+
+
+/* AQUI */
+
+.nav-item.back:hover{
+    text-align: center;
+    padding: auto;
+    background-color: #F0F2F5;
+}
+
+
+
+/* RODAPÉ */
+
+footer p{
+    font-size: 13px;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+footer small{
+    font-size: 12px;
+    margin-top: -1px;
+    color: gray;
+    padding-top: 0px !important;
+}
+footer a{
+    text-decoration: none;
+    color: gray;
+}
+
+footer a:hover{
+ text-decoration: none;
+ color: gray;
+}
+
+
